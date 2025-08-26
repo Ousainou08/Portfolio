@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ousainou's Game Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #2c3e50);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0,0,0,0.4);
+      position: sticky;
+      top:0;
+      z-index:999;
+    }
+    nav h1 { font-size:1.8rem; }
+    nav ul { display:flex; gap:1.5rem; list-style:none; }
+    nav a { color:#00f0ff; text-decoration:none; font-weight:600; }
+
+    header {
+      padding:5rem 2rem; text-align:center;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      box-shadow:0 8px 32px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    header h1 { font-size:3rem; margin-bottom:1rem; }
+    header p { font-size:1.2rem; color:#ccc; }
+
+    .games-section {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:2rem;
+      padding:3rem;
+      animation:slideIn 1s ease-in-out;
+    }
+    .game-card {
+      background: rgba(255,255,255,0.05);
+      border-radius:1rem;
+      padding:1.5rem;
+      box-shadow:0 8px 24px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .game-card:hover {
+      transform:translateY(-5px);
+      background: rgba(255,255,255,0.1);
+    }
+    .game-card h2 { font-size:1.5rem; margin-bottom:0.5rem; color:#00f0ff; }
+    .game-card p { color:#ccc; flex-grow:1; }
+    .game-card a {
+      display:inline-block;
+      margin-top:1rem;
+      padding:0.5rem 1rem;
+      border-radius:0.5rem;
+      background:#00f0ff;
+      color:#000;
+      font-weight:bold;
+      text-decoration:none;
+      text-align:center;
+      transition: background 0.3s ease;
+    }
+    .game-card a:hover { background:#00c0e0; }
+
+    .submit-section, .about-section {
+      padding:3rem;
+      background-color: rgba(255,255,255,0.05);
+      margin-top:2rem;
+    }
+    .submit-section h2, .about-section h2 {
+      font-size:2rem; margin-bottom:1rem; color:#00f0ff;
+    }
+    .submit-section form {
+      display:flex; flex-direction:column; gap:1rem; max-width:500px;
+    }
+    .submit-section input, .submit-section textarea {
+      padding:0.75rem; border:none; border-radius:0.5rem;
+      font-family:'Outfit',sans-serif;
+    }
+    .submit-section button {
+      padding:0.75rem; border:none; border-radius:0.5rem;
+      background-color:#00f0ff; color:#000; font-weight:bold;
+      cursor:pointer;
+    }
+    footer {
+      padding:2rem; text-align:center;
+      background: rgba(0,0,0,0.2);
+      color:#aaa; font-size:0.9rem;
+    }
+    @keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes slideIn { from {opacity:0; transform:translateX(-20px);} to {opacity:1; transform:translateX(0);} }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Ousainou</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#submit">Submit</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to Ousainou's Game Portfolio</h1>
+    <p>Explore and play original games made with passion, and submit your own!</p>
+  </header>
+
+  <section class="games-section" id="games">
+    <!-- Existing Games -->
+    <div class="game-card">
+      <h2>Bouncing Ball Game</h2>
+      <p>A power-up arcade game where speed increases and chaos ensues!</p>
+      <a href="https://ousainou08.github.io/Ball-bouncing-/" target="_blank">Play Now</a>
+    </div>
+
+    <div class="game-card">
+      <h2>Drawing Game</h2>
+      <p>Pixel fun! Make colorful sketches with retro style.</p>
+      <a href="https://ousainou08.github.io/Draw/" target="_blank">Play Now</a>
+    </div>
+
+    <!-- Tic Tac Toe Game -->
+    <div class="game-card">
+      <h2>Tic Tac Toe</h2>
+      <p>Play classic Tic Tac Toe with custom player names and a modern interface.</p>
+      <a href="https://ousainou08.github.io/Tic-Tac-Toe/" target="_blank">Play Now</a>
+    </div>
+
+    <!-- Placeholder Cards for New Games -->
+    <div class="game-card">
+      <h2>Library</h2>
+      <p>Manage a personal library online. Add, remove, and track your books with a clean interface and dynamic display.</p>
+      <a href="https://ousainou08.github.io/Library/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Etch-a-Sketch</h2>
+      <p>A digital drawing board that lets users sketch freely using keyboard or mouse controls, mimicking the classic Etch-a-Sketch toy.</p>
+      <a href="https://ousainou08.github.io/Etch-a-sketch/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Calculator</h2>
+      <p>A fully functional web calculator for basic arithmetic operations, featuring a modern, responsive design.</p>
+      <a href=" https://ousainou08.github.io/Calculator/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Rock, Papaer, Scissors</h2>
+      <p>Play the classic game against the computer with interactive gameplay and real-time score tracking.</p>
+      <a href="https://ousainou08.github.io/Rock-Paper-Scissors/" target="_blank">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h2>Weather App</h2>
+      <p>Check current weather conditions and forecasts for any city using live data from the OpenWeatherMap API, with a sleek interface.</p>
+      <a href="https://github.com/InSIST-Global-Ltd/weather-app.git" target="_blank">Play Now</a>
+    </div>
+  </section>
+
+  <section class="submit-section" id="submit">
+    <h2>Submit Your Game</h2>
+    <form onsubmit="submitGame(event)">
+      <input type="text" id="gameTitle" placeholder="Game Title" required />
+      <textarea id="gameDesc" placeholder="Game Description" required></textarea>
+      <input type="url" id="gameThumb" placeholder="Thumbnail Image URL" required />
+      <input type="url" id="gameURL" placeholder="Game Play URL" required />
+      <button type="submit">Submit Game</button>
+    </form>
+  </section>
+
+  <section class="about-section" id="about">
+    <h2>About This Site</h2>
+    <p>This portfolio showcases games by Ousainou Omar Jallow, a passionate creator and aspiring developer. It features original mini-games and provides a platform for others to share their creations. Whether you're here to play or contribute, you're welcome!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ousainou Omar Jallow. All rights reserved.</p>
+    <p>Contact: <a href="mailto:ousainouomarjallow@gmail.com" style="color:#00f0ff;">ousainouomarjallow@gmail.com</a></p>
+  </footer>
+
+  <script>
+    function submitGame(e) {
+      e.preventDefault();
+      const title = document.getElementById("gameTitle").value;
+      const desc = document.getElementById("gameDesc").value;
+      const thumb = document.getElementById("gameThumb").value;
+      const url = document.getElementById("gameURL").value;
+
+      const mailto = `mailto:ousainouomarjallow@gmail.com?subject=New Game Submission&body=Title: ${title}%0D%0ADescription: ${desc}%0D%0AThumbnail: ${thumb}%0D%0AGame URL: ${url}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
